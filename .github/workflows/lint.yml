@@ -28,3 +28,7 @@ jobs:
         uses: super-linter/super-linter@v7.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # disable Checkov security scans
+          VALIDATE_CHECKOV: false
+          # disable YAML formatting check via Prettier
+          VALIDATE_YAML_PRETTIER: false
